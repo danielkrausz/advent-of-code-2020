@@ -10,7 +10,7 @@ def pass_is_valid(lowest, highest, letter, passw):
 def pass_is_valid_2(pos1, pos2, letter, passw):
     a = passw[pos1-1] == letter
     b = passw[pos2-1] == letter
-    return (a and not b) or (not a and b)
+    return a ^ b
 
 if __name__ == "__main__":
     dir = os.path.dirname(__file__)
